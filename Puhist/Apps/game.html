@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Моя игра</title>
+  <style>
+    #game-board {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Моя игра</h1>
+  
+  <div id="game-board"></div>
+  
+  <script>
+    // Создаем игровое поле
+    const gameBoard = document.getElementById('game-board');
+    
+    // Добавляем обработчик клика на игровое поле
+    gameBoard.addEventListener('click', function(event) {
+      // Получаем координаты клика
+      const x = event.clientX;
+      const y = event.clientY;
+      
+      // Создаем элемент, который будет отображать клики
+      const clickMarker = document.createElement('div');
+      clickMarker.style.position = 'absolute';
+      clickMarker.style.left = x + 'px';
+      clickMarker.style.top = y + 'px';
+      clickMarker.style.width = '20px';
+      clickMarker.style.height = '20px';
+      clickMarker.style.backgroundColor = 'red';
+      
+      // Добавляем элемент на игровое поле
+      gameBoard.appendChild(clickMarker);
+    });
+  </script>
+</body>
+</html>

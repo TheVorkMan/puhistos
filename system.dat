@@ -1,0 +1,33 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+    std::ofstream file("example.dat", std::ios::binary); // открываем файл для записи в двоичном режиме
+
+    if (file.is_open()) {
+        // Записываем данные в файл
+        int num = 42;
+        file.write(reinterpret_cast<const char*>(&num), sizeof(num));
+
+        // Закрываем файл
+        file.close();
+    } else {
+        std::cout << "Не удалось открыть файл для записи!" << std::endl;
+    }
+
+    std::ifstream readFile("example.dat", std::ios::binary); // открываем файл для чтения в двоичном режиме
+
+    if (readFile.is_open()) {
+        // Читаем данные из файла
+        int readNum;
+        readFile.read(reinterpret_cast<char*>(&readNum), sizeof(readNum));
+        std::cout << "Прочитанное число: " << readNum << std::endl;
+
+        // Закрываем файл
+        readFile.close();
+    } else {
+        std::cout << "Не удалось открыть файл для чтения!" << std::endl;
+    }
+
+    return 0;
+}

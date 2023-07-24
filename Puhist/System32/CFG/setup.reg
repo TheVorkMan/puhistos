@@ -1,0 +1,50 @@
+[Setup info]
+ProductName=Puhist 1.0
+Company=29 Studio
+InstallLocation=Partition
+DefaltLaunge=russian
+AutoUpdate=on,off
+LicenseAgrement=System.dll
+[Setup Start]
+InstallType=Your_mode
+ProductKey=Product.txt
+Timezone=DefaltLaunge
+Partition=Your_name
+NetworkSettings=Your_set
+AdditionalFeatures=Your_set
+[Setup #2]
+InstallDirectory=Your_set
+StartMenuShortcut=Your_set
+AutoStart=Your_set
+LicenseKey=Key
+[Setup #3]
+CustomInstall=Your_mode
+InstallSize=Your_mode
+DisableUpdates=Yes,no
+InstallOption=Your_set
+RegisterProduct=Optional
+[Setup #4]
+CustomizationOptions=Optional
+DefaltSettings=Optional
+DataLocation=Optional
+ProxySettings=Optional
+UserPermision=Optional
+[Setup #5]
+SilentMode=1
+RunOnStartup=Optional
+CustomTheme=Optional
+BackupSettings=Optional
+UninstallOptions=Optional
+[Setup #6]
+DefaltPermissions=Optional
+UserPreferences=Optional
+InstalationLog=Optional
+CustomScripts=Optional
+MaintenanceMode=Optional
+[Setup #7,#8]
+DefaltUser=Setup_start=1,Setup_End=0
+DefaltUserPassword=1
+
+
+
+

@@ -1,0 +1,22 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+    std::ifstream file("example.sys", std::ios::binary); // открываем файл для чтения в двоичном режиме
+
+    if (file.is_open()) {
+        // Читаем содержимое файла
+        char byte;
+        while (file.read(&byte, sizeof(byte))) {
+            // Обрабатываем каждый байт из файла
+            // Можно выполнить дополнительные операции или анализировать данные
+        }
+
+        // Закрываем файл
+        file.close();
+    } else {
+        std::cout << "Не удалось открыть файл для чтения!" << std::endl;
+    }
+
+    return 0;
+}

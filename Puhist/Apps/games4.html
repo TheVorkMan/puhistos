@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Морской бой</title>
+  <style>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(10, 40px);
+      gap: 2px;
+    }
+    
+    .cell {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Морской бой</h1>
+  
+  <div class="board">
+    <!-- Создание игрового поля с клетками -->
+    <!-- Каждая клетка имеет класс cell -->
+  </div>
+  
+  <script>
+    // JavaScript код для управления игрой
+    
+    // Создание игрового поля
+    const board = document.querySelector('.board');
+    for (let i = 0; i < 10; i++) {
+      for (let j = 0; j < 10; j++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        board.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+</html>

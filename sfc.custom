@@ -1,0 +1,116 @@
+echo %Rooot%
+print("Це мій custom файл!")
+#include <fstream>
+
+int main() {
+  std::fstream file;
+  file.open("OS", std::ios::out | std::ios::app);
+  
+  if (page.is_open()) {
+    file << "Это пример записи в файл с помощью fstream!";
+    file.close();
+  }
+  
+  return 0;
+}
+
+#include <iostream>
+
+// Определение класса
+class MyClass {
+public:
+    // Переменная-член класса
+    int myVariable;
+
+    // Конструктор класса
+    MyClass(int value) {
+        myVariable = value;
+    }
+
+    // Метод класса
+    void myMethod() {
+        std::cout << "Значение переменной-члена: " << myVariable << std::endl;
+    }
+};
+
+// Функция
+void myFunction() {
+    std::cout << "Привет из моей функции!" << std::endl;
+}
+
+// Главная функция
+int main() {
+    // Создание объекта класса MyClass
+    MyClass myObject(42);
+
+    // Вызов метода класса
+    myObject.myMethod();
+
+    // Вызов функции
+    myFunction();
+
+    return 0;
+}
+
+#include <iostream>
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {5, 2, 8, 12, 1};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n);
+
+    std::cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+
+#include <iostream>
+#include <boost/asio.hpp>
+
+int main() {
+   boost::asio::io_context io_context;
+
+   // Создаем объект resolver для разрешения доменного имени в IP-адрес
+   boost::asio::ip::tcp::resolver resolver(io_context);
+
+   // Создаем объект query для задания адреса сервера и порта
+   boost::asio::ip::tcp::resolver::query query("example.com", "http");
+
+   // Разрешаем доменное имя в IP-адрес
+   boost::asio::ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
+
+   // Создаем сокет и устанавливаем соединение с сервером
+   boost::asio::ip::tcp::socket socket(io_context);
+   boost::asio::connect(socket, endpoint_iterator);
+
+   // Отправляем HTTP-запрос на сервер
+   boost::asio::write(socket, boost::asio::buffer("GET / HTTP/1.1\r\nHost: example.com\r\n\r\n"));
+
+   // Получаем ответ от сервера
+   boost::asio::streambuf response;
+   boost::asio::read_until(socket, response, "\r\n");
+
+   // Выводим полученный ответ
+   std::cout << &response;
+
+   return 0;
+}
+
+

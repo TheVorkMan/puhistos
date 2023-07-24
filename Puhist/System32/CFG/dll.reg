@@ -1,0 +1,3 @@
+[HKEY_DLL]
+SystemFile=%System%1.0.bat
+SystemConfig=System.reg

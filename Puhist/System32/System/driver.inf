@@ -1,0 +1,4 @@
+setup info=Arsen Lupen password:123 setup password:7641
+system settings=bios=on acpi=yes 2FA=yes 29account=yes wifi=yes
+system drive=F
+setup end=yes,no

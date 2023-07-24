@@ -1,0 +1,7 @@
+<root>
+  <element1>%Root%</element1>
+  <element2>SystemProcess</element2>
+  <element3>SystemBoot</element3>
+  <element4>SystemRootAccount</element4>
+  <element5>UserAccount</element5>
+</root>

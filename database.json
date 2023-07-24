@@ -1,0 +1,10 @@
+﻿{
+    "param1": "Система",
+    "param2": 42,
+    "param3": true,
+    "param4": ["1", "8"],
+    "param5": {
+      "subparam1": "1",
+      "subparam2": "7"
+    }
+  }

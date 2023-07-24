@@ -1,0 +1,20 @@
+#include <iostream>
+#include <windows.h>
+
+int main() {
+    // Загрузка .ocx файла
+    HMODULE ocxModule = LoadLibrary("example.ocx");
+    if (ocxModule) {
+        std::cout << "Оcx файл успешно загружен!" << std::endl;
+
+        // Выполнение операций с .ocx файлом
+        // ... Твой код здесь ...
+
+        // Выгрузка .ocx файла
+        FreeLibrary(ocxModule);
+    } else {
+        std::cout << "Не удалось загрузить .ocx файл!" << std::endl;
+    }
+
+    return 0;
+}
