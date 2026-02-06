@@ -1,4 +1,4 @@
-This code is proprietary.
-Copying, modifying, or distributing without explicit permission is prohibited.
+License: Unknown / No license provided by original author
+This code is published for historical/educational purposes only.
 
 # "Эту ос не копировать а то иначе в суд"
