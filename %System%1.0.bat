@@ -11,11 +11,13 @@ if %var%==C (set /p code=activation code
 )
 if %var%==CD (echo System_page=Puhist
 )
-Call exp.bat
 title Puhist Dos 2.0
 start BEEP.BAT
+color 2
 echo Loading...
 timeout /t 2 >nul
+echo ......................................................................
+timeout /t 1 >nul
 echo ......................................................................
 timeout /t 1 >nul
 echo ......................................................................
@@ -28,18 +30,19 @@ echo loading a end
 
 IF EXIST "C:\Users\Arsen Lupen\Desktop\OS\exp.bat" (
     echo directory exists
+   cls
 ) ELSE (
-    set /p e=error check>nul
-    set /p r=error check>nul
-    echo error %e%=%r%
-    echo Crash report
-    echo
+color 17
+echo.
+echo error-0x00007d
+echo restart os
+ping -n 6 127.0.0.1 > nul
     recover c:\Users\Arsen Lupen\Desktop\OS\exp.bat
 )
-Echo Press any key for start system
+Echo Press any key
 pause >nul
-echo welcome to puhist dos 1.0 x32 
-ipconfig
+cls
+echo welcome to puhist dos 2.0 x32 
 color a
 :x
 set /p x="OS>"
@@ -151,18 +154,18 @@ if %x%==systemfile (start system.reg
 )
 if %x%==secure_mode (setlocal
 )
-if %x%==scandisk (chkdsk YOUR: /f
+if %x%==scandisk (chkdsk A: /f
 )
-if %x%==accounts (net user john /add /profilepath:%Drivename%:\Users\%Random%
+if %x%==accounts (net user john /add /profilepath:A:\UCC
 )
-if %x%==newmessage (msg *Уведомление От User=Ха я занят не могу сейчас*
+if %x%==newmessage (msg *Уведомление От John=Ха я занят не могу сейчас*
 )
 if %x%==hclp (echo creator mail=arsenijgoj282@gmail.com
 )
-if %x%==search (set /p search_query=Введите поисковый запрос:
+if %x%==search (set /p search_query=Please enter the search:
 dir /s /b "*%search_query%*"
 )
 if %x%==message (set /p message=Введите сообщение для уведомления:
-msg * %message%
+msg *%message%*
 )
 goto x 

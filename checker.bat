@@ -1,5 +1,5 @@
 @echo off
-choice
-goto scren
 :scren
-start screen.scr
+echo chl
+goto scren
+

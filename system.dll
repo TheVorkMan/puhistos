@@ -1,0 +1,13 @@
+#include <Windows.h>
+
+// Пример экспортируемой функции
+extern "C" __declspec(dllexport) void myFunction()
+{
+    //cin %system%1.0.bat
+}
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
+{
+    //std::sort
+    return TRUE;
+}

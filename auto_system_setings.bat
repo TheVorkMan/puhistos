@@ -21,4 +21,5 @@ echo Starting service...
 sc start Работа_системы
 echo Service started!
 
+pause
 echo Настройка ОС завершена!
